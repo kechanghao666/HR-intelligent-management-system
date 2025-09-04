@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Smooth closed-eye icon with a single stroke style to avoid visual tearing -->
+  <g stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+    <!-- upper and lower eyelids -->
+    <path d="M1 8 C3 4, 13 4, 15 8"/>
+    <path d="M15 8 C13 12, 3 12, 1 8"/>
+    <!-- slash to indicate hidden -->
+    <path d="M3 3 L13 13"/>
+  </g>
+</svg>

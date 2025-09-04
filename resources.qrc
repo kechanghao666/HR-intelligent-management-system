@@ -1,0 +1,9 @@
+<RCC>
+    <qresource prefix="/">
+        <file>styles/main.qss</file>
+        <file>styles/modern.qss</file>
+        <file>icons/eye-open.svg</file>
+        <file>icons/eye-closed.svg</file>
+        <file>icons/check.svg</file>
+    </qresource>
+</RCC>
