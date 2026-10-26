@@ -29,7 +29,7 @@ private:
     bool isSSLSupported();
     QString generateLocalResponse(const QString& question);
     void loadCredentials();
-    
+
     QNetworkAccessManager *manager;
     // 记录最近一次提问内容，用于失败时本地兜底回答
     QString lastQuestion;
