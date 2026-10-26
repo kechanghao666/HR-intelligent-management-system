@@ -1,0 +1,39 @@
+# Qt Creator user-specific settings
+*.pro.user
+*.pro.user.*
+.qtcreator/
+.qmake.stash
+
+# Build output
+build/
+debug/
+release/
+*.o
+*.obj
+*.exe
+*.dll
+*.a
+*.lib
+*.pdb
+*.ilk
+*.idx
+
+# Generated Qt files
+moc_*.cpp
+ui_*.h
+qrc_*.cpp
+Makefile*
+
+# Runtime data and local credentials
+*.db
+*.sqlite
+*.sqlite3
+.env
+.env.*
+!.env.example
+
+# OS/editor files
+.DS_Store
+Thumbs.db
+*.swp
+*~

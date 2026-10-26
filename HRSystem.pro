@@ -1,4 +1,4 @@
-QT += core gui widgets network sql printsupport core5compat xml
+QT += core gui widgets network sql printsupport xml
 
 CONFIG += c++17
 

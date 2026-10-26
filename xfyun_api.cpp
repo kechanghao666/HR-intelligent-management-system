@@ -421,16 +421,29 @@ void XfyunAPI::onSslErrors(QNetworkReply *reply, const QList<QSslError> &errors)
 
 void XfyunAPI::loadCredentials()
 {
-    // 读取环境变量或QSettings
+    // 优先读取环境变量；未提供时再读取仅保存在本机的 QSettings。
     QProcessEnvironment env = QProcessEnvironment::systemEnvironment();
+    appId = env.value("XFYUN_APP_ID").trimmed();
+    apiSecret = env.value("XFYUN_API_SECRET").trimmed();
+    apiKey = env.value("XFYUN_API_KEY").trimmed();
     QString envPwd = env.value("XFYUN_API_PASSWORD");
     if (!envPwd.trimmed().isEmpty()) {
         apiPassword = envPwd.trimmed();
         qDebug() << "[XfyunAPI] 已从环境变量载入API Password";
-        return;
     }
     QSettings settings("Company HR System", "HR智能问答系统");
-    apiPassword = settings.value("xfyun/api_password").toString().trimmed();
+    if (appId.isEmpty()) {
+        appId = settings.value("xfyun/app_id").toString().trimmed();
+    }
+    if (apiSecret.isEmpty()) {
+        apiSecret = settings.value("xfyun/api_secret").toString().trimmed();
+    }
+    if (apiKey.isEmpty()) {
+        apiKey = settings.value("xfyun/api_key").toString().trimmed();
+    }
+    if (apiPassword.isEmpty()) {
+        apiPassword = settings.value("xfyun/api_password").toString().trimmed();
+    }
     if (!apiPassword.isEmpty()) {
         qDebug() << "[XfyunAPI] 已从QSettings载入API Password";
     }

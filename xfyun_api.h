@@ -33,10 +33,10 @@ private:
     QNetworkAccessManager *manager;
     // 记录最近一次提问内容，用于失败时本地兜底回答
     QString lastQuestion;
-    // WebSocket鉴权使用（保留）
-    QString appId = "a473258b";
-    QString apiSecret = "MjZmZmMzNTI3Y2JjYjdhOWM0ODVjNTEx";
-    QString apiKey = "3cad5777de1da718630f606cfc223a56";
+    // 鉴权信息仅从环境变量或本机 QSettings 读取，禁止写入源码仓库。
+    QString appId;
+    QString apiSecret;
+    QString apiKey;
     // HTTP REST 使用：Authorization: Bearer {apiPassword}
     QString apiPassword; // 可从QSettings/env载入
 };
