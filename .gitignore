@@ -37,3 +37,5 @@ Makefile*
 Thumbs.db
 *.swp
 *~
+
+/build-public/
